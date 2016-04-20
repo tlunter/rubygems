@@ -28,6 +28,9 @@ rvm:
 - 2.2.3
 - 2.3.0
 - ruby-head
+- jruby-1.7.20
+- jruby-9.0.5.0
+- jruby-head
 env:
   - "YAML=syck"
   - "YAML=psych"
@@ -45,6 +48,12 @@ matrix:
     - rvm: 2.3.0
       env: "YAML=syck"
     - rvm: ruby-head
+      env: "YAML=syck"
+    - rvm: jruby-1.7.20
+      env: "YAML=syck"
+    - rvm: jruby-9.0.5.0
+      env: "YAML=syck"
+    - rvm: jruby-head
       env: "YAML=syck"
   allow_failures:
     - rvm: ruby-head
