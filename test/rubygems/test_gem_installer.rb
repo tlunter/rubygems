@@ -291,7 +291,7 @@ gem 'other', version
   def test_generate_bin_bindir
     @installer.wrappers = true
 
-    @spec.executables = %w[executable]
+    @spec.executables = ["executable".freeze]
     @spec.bindir = '.'
 
     exec_file = @installer.formatted_program_filename 'executable'
@@ -431,7 +431,7 @@ gem 'other', version
 
   def test_generate_bin_script_no_shebang
     @installer.wrappers = true
-    @spec.executables = %w[executable]
+    @spec.executables = ["executable".freeze]
 
     gem_dir = File.join @gemhome, 'gems', @spec.full_name
     gem_bindir = File.join gem_dir, 'bin'
